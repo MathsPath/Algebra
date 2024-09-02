@@ -1,8 +1,8 @@
 # """ Slope == tangent """
 
 # Distances
-vertical = 0.0
-horizontal = 7.0
+vertical = float(input("Vertical distance: "))
+horizontal = float(input("Horizontal distance: "))
 
 def slope(vert, horizon):
     if horizon == 0.0:
@@ -13,11 +13,11 @@ print(slope(vert=vertical, horizon=horizontal))
 
 
 # On the coordinate plane
-a_point = (-1.0, -1.0)
-b_point = (4.0, -3.0)
+a = input("Input A coordinate (separate with ','): ").split(',')
+b = input("Input B coordinate (separate with ','): ").split(',')
 
 def slope_plane(point1, point2):
     return ( point2[-1] - point1[-1] ) / ( point2[0] - point1[0] )
 
-print(slope_plane(point1=a_point, point2=b_point))
+print(slope_plane(point1=a, point2=b))
 
